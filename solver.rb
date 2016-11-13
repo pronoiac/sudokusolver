@@ -63,3 +63,24 @@ squares.each do |square|
 end
 
 debug_log 3, "c5 peers: #{peers["c5"]}"
+
+# loop:
+#   read board
+# well. how should we describe the board?
+# flat string, for ease of copying?
+# "123456789" x 9 x 9 to start?
+# how to refer to "a1":
+# its index in squares, maybe?
+
+blank_board = "123456789" * 9 * 9
+
+# choices(square)
+#   slice board
+# remove_choice(square, choice)
+#   do math, that square = "."
+
+# eliminate_choice(square, choice)
+#   check other squares in units for count of that choice
+#   if one, choose that square, choice
+# choose(square, choice)
+#   eliminate other choices for square
